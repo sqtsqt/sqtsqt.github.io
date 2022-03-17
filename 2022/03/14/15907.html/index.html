@@ -37,7 +37,7 @@ github
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -487,7 +487,7 @@ github
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    966
                 </div>
                 
 
@@ -523,75 +523,81 @@ github
 <p><img src="https://s1.ax1x.com/2022/03/14/bOLaEn.png"></p>
 <h4 id="1-2-安装node"><a href="#1-2-安装node" class="headerlink" title="1.2 安装node"></a>1.2 安装node</h4><p>下载地址：<a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js</a> </p>
 <p>安装完成后，在git bash中可以查看是否安装成功：</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">node -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
+<pre class=" language-Linux"><code class="language-Linux">node -v
+</code></pre>
 <p><img src="https://s1.ax1x.com/2022/03/14/bXlmAH.png"></p>
 <h4 id="1-3-安装hexo"><a href="#1-3-安装hexo" class="headerlink" title="1.3 安装hexo"></a>1.3 安装hexo</h4><p>npm指令使用的是国外的服务器，下载东西可能会慢，可以安装cnpm，使用国内淘宝镜像，在git bash中输入：</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org
-npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<pre class=" language-Linux"><code class="language-Linux">npm config set registry https://registry.npm.taobao.org
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+</code></pre>
 <p>输入cnpm -v查看是否安装成功：</p>
 <p><img src="https://s1.ax1x.com/2022/03/14/bX1Vx0.png"></p>
 <p>用cnpm下载hexo：</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">cnpm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<pre class=" language-Linux"><code class="language-Linux">cnpm install -g hexo-cli
+</code></pre>
 <p>同样可以用hexo -v查看是否安装成功：</p>
 <p><img src="https://s1.ax1x.com/2022/03/14/bX13GR.png"></p>
 <p>讲hexo初始化：</p>
-<pre class="line-numbers language-Liunx" data-language="Liunx"><code class="language-Liunx">hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<pre class=" language-Liunx"><code class="language-Liunx">hexo init
+</code></pre>
 <p>安装2个hexo插件：</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">npm install hexo-deployer-git --save
-npm install hexo-server<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<pre class=" language-Linux"><code class="language-Linux">npm install hexo-deployer-git --save
+npm install hexo-server
+</code></pre>
 <p>在本机预览效果：</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">hexo g &#x2F;&#x2F;生成网站静态文件到默认设置的 public 文件夹
-hexo s &#x2F;&#x2F;启动本地服务器，用于预览主题。默认地址：http:&#x2F;&#x2F;localhost:4000&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<pre class=" language-Linux"><code class="language-Linux">hexo g //生成网站静态文件到默认设置的 public 文件夹
+hexo s //启动本地服务器，用于预览主题。默认地址：http://localhost:4000/
+</code></pre>
 <h3 id="2-服务器端安装软件"><a href="#2-服务器端安装软件" class="headerlink" title="2. 服务器端安装软件"></a>2. 服务器端安装软件</h3><h4 id="2-1-安装nginx"><a href="#2-1-安装nginx" class="headerlink" title="2.1 安装nginx"></a>2.1 安装nginx</h4><p>登录宝塔面板，打开软件商店，搜索nginx，如果没有安装，点击安装即可。</p>
 <p><img src="https://s1.ax1x.com/2022/03/14/bXRbCj.png"></p>
 <h4 id="2-2-安装node-js"><a href="#2-2-安装node-js" class="headerlink" title="2.2 安装node.js"></a>2.2 安装node.js</h4><p>用MobaXterm连接服务器(也可以用XShell)，登录管理员root账号，输入以下命令：</p>
 <ol>
 <li><p>下载压缩包</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">wget https:&#x2F;&#x2F;nodejs.org&#x2F;dist&#x2F;v10.5.0&#x2F;node-v10.5.0-linux-x64.tar.xz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class=" language-Linux"><code class="language-Linux">wget https://nodejs.org/dist/v10.5.0/node-v10.5.0-linux-x64.tar.xz
+</code></pre>
 </li>
 <li><p>解压</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">tar -xvJf node-v10.5.0-linux-x64.tar.xz
-mv node-v10.5.0-linux-x64 node<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class=" language-Linux"><code class="language-Linux">tar -xvJf node-v10.5.0-linux-x64.tar.xz
+mv node-v10.5.0-linux-x64 node
+</code></pre>
 </li>
 <li><p>配置环境</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">mv node&#x2F; &#x2F;usr&#x2F;local&#x2F;  #移动文件夹到 &#x2F;usr&#x2F;local&#x2F; 下
-vim ~&#x2F;.bash_profile  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class=" language-Linux"><code class="language-Linux">mv node/ /usr/local/  #移动文件夹到 /usr/local/ 下
+vim ~/.bash_profile  
+</code></pre>
 </li>
 <li><p>增加以下内容</p>
 <p>按 i 进入插入模式，将下面的内容添加进去：</p>
-<pre class="line-numbers language-none"><code class="language-none">export NODE_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;node      #node文件夹位置
-export PATH&#x3D;$NODE_HOME&#x2F;bin:$PATH<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<pre><code>export NODE_HOME=/usr/local/node      #node文件夹位置
+export PATH=$NODE_HOME/bin:$PATH
+</code></pre>
 <p>完了按Esc，再按 :x 保存并退出</p>
 </li>
 <li><p>更新配置</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">source ~&#x2F;.bash_profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class=" language-Linux"><code class="language-Linux">source ~/.bash_profile
+</code></pre>
 </li>
 <li><p>测试是否安装成功</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">node -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<pre class=" language-Linux"><code class="language-Linux">node -v
+</code></pre>
 <p>有版本号即安装成功。</p>
 </li>
 </ol>
 <h4 id="2-3-安装git"><a href="#2-3-安装git" class="headerlink" title="2.3 安装git"></a>2.3 安装git</h4><ol>
 <li><p>安装git</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">yum install -y git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class=" language-Linux"><code class="language-Linux">yum install -y git
+</code></pre>
 </li>
 <li><p>创建一个新用户</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">adduser git #创建用户(用户名随意)
-passwd git  #设置密码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<pre class=" language-Linux"><code class="language-Linux">adduser git #创建用户(用户名随意)
+passwd git  #设置密码
+</code></pre>
+</li>
 </ol>
 <h3 id="3-搭建"><a href="#3-搭建" class="headerlink" title="3. 搭建"></a>3. 搭建</h3><h4 id="3-1-添加站点"><a href="#3-1-添加站点" class="headerlink" title="3.1 添加站点"></a>3.1 添加站点</h4><ol>
 <li><p>创建一个文件夹，作为站点的根目录</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">mkdir &#x2F;home&#x2F;a&#x2F;blog  #路径可以自己安排<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class=" language-Linux"><code class="language-Linux">mkdir /home/a/blog  #路径可以自己安排
+</code></pre>
 </li>
 <li><p>在宝塔面板添加站点</p>
 </li>
@@ -599,55 +605,63 @@ passwd git  #设置密码<span aria-hidden="true" class="line-numbers-rows"><spa
 <p>[<img src="https://s1.ax1x.com/2022/03/14/bXHbwR.png"></p>
 <ol start="3">
 <li><p>将博客发布目录的属主属组改为git(上面创建的用户名)</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">chown -R git:git &#x2F;home&#x2F;a&#x2F;blog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class=" language-Linux"><code class="language-Linux">chown -R git:git /home/a/blog
+</code></pre>
+</li>
 </ol>
 <h4 id="3-2-获取SSH-KEY"><a href="#3-2-获取SSH-KEY" class="headerlink" title="3.2 获取SSH KEY"></a>3.2 获取SSH KEY</h4><ol>
 <li><p>在本地的blog文件夹中，右键打开git bash，输入以下命令</p>
-<pre class="line-numbers language-git" data-language="git"><code class="language-git">cat ~&#x2F;.ssh&#x2F;id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<pre class=" language-git"><code class="language-git">cat ~/.ssh/id_rsa.pub
+</code></pre>
 <p>复制获取的内容</p>
 </li>
 <li><p>在服务器终端输入以下命令：</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">su git #切换为刚才创建的用户
-mkdir ~&#x2F;.ssh #创建目录
-vim ~&#x2F;.ssh&#x2F;authorized_keys #将刚刚复制的内容粘贴进去，编辑方法同上(2.2中第四步)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
+<pre class=" language-Linux"><code class="language-Linux">su git #切换为刚才创建的用户
+mkdir ~/.ssh #创建目录
+vim ~/.ssh/authorized_keys #将刚刚复制的内容粘贴进去，编辑方法同上(2.2中第四步)
+</code></pre>
 <p>将文件和目录设置权限：</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">chmod 600 ~&#x2F;.ssh&#x2F;authorozed_keys
-chmod 700 ~&#x2F;.ssh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class=" language-Linux"><code class="language-Linux">chmod 600 ~/.ssh/authorozed_keys
+chmod 700 ~/.ssh
+</code></pre>
 </li>
 <li><p>在本地终端输入以下命令，登录成功则配置成功</p>
-<pre class="line-numbers language-none"><code class="language-none">ssh -v git@ip #注意更改你自己的服务器ip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre><code>ssh -v git@ip #注意更改你自己的服务器ip
+</code></pre>
+</li>
 </ol>
 <h4 id="3-3-配置Git仓库"><a href="#3-3-配置Git仓库" class="headerlink" title="3.3 配置Git仓库"></a>3.3 配置Git仓库</h4><ol>
 <li><p>初始化Git仓库</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">cd ~
-git init --bare blog.git    #使用--bare参数，Git就会创建一个裸库。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class=" language-Linux"><code class="language-Linux">cd ~
+git init --bare blog.git    #使用--bare参数，Git就会创建一个裸库。
+</code></pre>
 </li>
 <li><p>配置git hooks</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">vim ~&#x2F;blog.git&#x2F;hooks&#x2F;post-receive<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<pre class=" language-Linux"><code class="language-Linux">vim ~/blog.git/hooks/post-receive
+</code></pre>
 <p>将以下内容添加进去：</p>
-<pre class="line-numbers language-none"><code class="language-none">#!&#x2F;bin&#x2F;bash
-git --work-tree&#x3D;&#x2F;home&#x2F;a&#x2F;blog --git-dir&#x3D;&#x2F;home&#x2F;git&#x2F;blog.git checkout -f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<pre><code>#!/bin/bash
+git --work-tree=/home/a/blog --git-dir=/home/git/blog.git checkout -f
+</code></pre>
 <p>将自己的路径填对</p>
 </li>
 <li><p>赋予其权限</p>
-<pre class="line-numbers language-Linux" data-language="Linux"><code class="language-Linux">chmod +x ~&#x2F;blog.git&#x2F;hooks&#x2F;post-rceive<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre class=" language-Linux"><code class="language-Linux">chmod +x ~/blog.git/hooks/post-rceive
+</code></pre>
+</li>
 </ol>
 <h4 id="3-4-配置本地的blog文件夹"><a href="#3-4-配置本地的blog文件夹" class="headerlink" title="3.4 配置本地的blog文件夹"></a>3.4 配置本地的blog文件夹</h4><p>打开blog根目录下的主配置文件_config.yml，在最后添加：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">deploy:
-  type: git
-  repo: git@ip:&#x2F;home&#x2F;git&#x2F;blog.git #注意改成自己的服务器ip
-  branch: master
-  message:<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> git@ip<span class="token punctuation">:</span>/home/git/blog.git <span class="token comment" spellcheck="true">#注意改成自己的服务器ip</span>
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master
+  <span class="token key atrule">message</span><span class="token punctuation">:</span>
+</code></pre>
 <h3 id="4-部署"><a href="#4-部署" class="headerlink" title="4. 部署"></a>4. 部署</h3><p>在本地blog根目录右键打开git bash，输入以下命令：</p>
-<pre class="line-numbers language-git" data-language="git"><code class="language-git">hexo clean
+<pre class=" language-git"><code class="language-git">hexo clean
 hexo g
-hexo d  #自动生成网站静态文件，并部署到设定的仓库<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
+hexo d  #自动生成网站静态文件，并部署到设定的仓库
+</code></pre>
 <p>在浏览器输入你的ip地址(或域名)就可以看到属于你的博客了。</p>
 
                 
@@ -1144,60 +1158,6 @@ hexo d  #自动生成网站静态文件，并部署到设定的仓库<span aria-
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="122437098"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-    
 
     <div class="container row center-align"
          style="margin-bottom: 0px !important;">
@@ -1212,7 +1172,7 @@ hexo d  #自动生成网站静态文件，并部署到设定的仓库<span aria-
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">36.3k</span>
+                        class="white-color">34.6k</span>
             
             
             
